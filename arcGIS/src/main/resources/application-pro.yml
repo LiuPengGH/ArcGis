@@ -7,8 +7,8 @@ spring:
   datasource:
     username: root
     password: Infra5@Gep0int
-    #url: jdbc:mysql://58.211.227.180:3366/ltzjk?autoReconnect=true&useSSL=false
-    url: jdbc:mysql://10.1.176.18:3366/ltzjk?autoReconnect=true&useSSL=false
+    #url: jdbc:mysql://xx.xx.xx.xx:3366/ltzjk?autoReconnect=true&useSSL=false
+    url: jdbc:mysql://xx.xx.xx.xx:3366/ltzjk?autoReconnect=true&useSSL=false
     driver-class-name: com.mysql.jdbc.Driver
     hikari:
       max-lifetime: 500000
