@@ -10,8 +10,8 @@ public class MysqlUtil {
 
     //设置mysql驱动和url
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    //static final String DB_URL = "jdbc:mysql://58.211.227.180:3366/ltzjk";
-    static final String DB_URL = "jdbc:mysql://58.211.227.180:3366/ltzjk?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
+    //static final String DB_URL = "jdbc:mysql://xx.xx.xx.xx:3366/ltzjk";
+    static final String DB_URL = "jdbc:mysql://xx.xx.xx.xx:3366/ltzjk?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
 
     //设置用户名和密码
     static final String USER = "root";
