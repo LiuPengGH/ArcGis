@@ -1,7 +1,5 @@
 package com.example.arcGIS.controller;
 
-
-import com.example.arcGIS.pojo.Message;
 import com.example.arcGIS.request.CommunalRequest;
 import com.example.arcGIS.response.CommunalResponse;
 import com.example.arcGIS.service.ArcGISService;
@@ -45,6 +43,7 @@ public class ArcGISController {
     @PostMapping("/datasynchronization")
     public CommunalResponse arcGIS_Util(@RequestBody CommunalRequest communalRequest) {
         LOGGER.info("======================START=========================");
+        LOGGER.info(communalRequest.getRowGuid());
 
         List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
 
@@ -54,6 +53,7 @@ public class ArcGISController {
             ResultSet rs = MysqlUpObjID.select("SELECT * FROM componentinfofront WHERE RowGuid = '" + communalRequest.getRowGuid() + "'");
             ResultSetMetaData md = rs.getMetaData();
             int columnCount = md.getColumnCount();
+            System.out.println(columnCount);
             while (rs.next()) {
                 Map<String, Object> rowData = new HashMap<String, Object>();
                 for (int i = 1; i <= columnCount; i++) {

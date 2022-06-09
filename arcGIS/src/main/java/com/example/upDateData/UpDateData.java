@@ -33,7 +33,7 @@ public class UpDateData {
                 //初始化arcengine
                 EngineInitializer.initializeEngine();
 
-                String path = "C:\\Users\\Administrator\\Documents\\javaJAR\\mc.properties";
+                String path = "C:\\Users\\lp\\Documents\\javaJAR\\mc.properties";
                 String gdbPath = PropertiesUtil.getPropertyParam("GDBPath", path);
                 String[] sFlds1 = "DeptCode1,DeptName1,DeptCode2,DeptName2,DeptCode3,DeptName3,BGID,ObjState,ORDate,CHDate,DataSource,Note,Material,PicAddress,LocateDSC,ObjName,x,y,ldcode,gacode".split(",");
                 String sBJType;
@@ -41,6 +41,9 @@ public class UpDateData {
                 FileGDBWorkspaceFactory pFileGDBWorkspaceFactoryClass = new FileGDBWorkspaceFactory();
                 IWorkspace iWorkspace = pFileGDBWorkspaceFactoryClass.openFromFile(gdbPath, 0);
                 IFeatureWorkspace pFeatureWorkspace = (IFeatureWorkspace) pFileGDBWorkspaceFactoryClass.openFromFile(gdbPath, 0);
+
+
+
 
 
 

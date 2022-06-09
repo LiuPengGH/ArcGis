@@ -7,8 +7,8 @@ public class MysqlUpObjID {
 
     //设置mysql驱动和url
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    //static final String DB_URL = "jdbc:mysql://xx.xx.xx.xx.180:3366/ltzjk";
-    static final String DB_URL = "jdbc:mysql://xx.xx.xx.xx:3366/ltzjk?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
+    //static final String DB_URL = "jdbc:mysql://58.211.227.180:3366/ltzjk?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
+    static final String DB_URL = "jdbc:mysql://10.1.176.18:3366/ltzjk?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
 
     //设置用户名和密码
     static final String USER = "root";
@@ -17,13 +17,11 @@ public class MysqlUpObjID {
     static Connection conn = null;
     static Statement stmt = null;
 
-
     /**
      * @param
      * @return map
      */
     public static void GetSqlVal(String upSQL) {
-
 
         try {
             //注册JDBC驱动
@@ -46,8 +44,22 @@ public class MysqlUpObjID {
             // 处理 JDBC 错误
             se.printStackTrace();
         }// 处理 Class.forName 错误
-
-
+//        finally {
+//            if (stmt!=null){
+//                try {
+//                    stmt.close();
+//                } catch (SQLException throwables) {
+//                    throwables.printStackTrace();
+//                }
+//            }
+//            if (conn!=null) {
+//                try {
+//                    conn.close();
+//                } catch (SQLException throwables) {
+//                    throwables.printStackTrace();
+//                }
+//            }
+//        }
     }
     public static void Insert(String isnertSQL) {
 
@@ -73,11 +85,25 @@ public class MysqlUpObjID {
             // 处理 JDBC 错误
             se.printStackTrace();
         }// 处理 Class.forName 错误
+//        finally {
+//            if (stmt!=null){
+//                try {
+//                    stmt.close();
+//                } catch (SQLException throwables) {
+//                    throwables.printStackTrace();
+//                }
+//            }
+//            if (conn!=null) {
+//                try {
+//                    conn.close();
+//                } catch (SQLException throwables) {
+//                    throwables.printStackTrace();
+//                }
+//            }
+//        }
 
 
     }
-
-
     public static ResultSet select(String isnertSQL) {
 
 
@@ -107,8 +133,22 @@ public class MysqlUpObjID {
 
 
         }// 处理 Class.forName 错误
+//        finally {
+//            if (stmt!=null){
+//                try {
+//                    stmt.close();
+//                } catch (SQLException throwables) {
+//                    throwables.printStackTrace();
+//                }
+//            }
+//            if (conn!=null) {
+//                try {
+//                    conn.close();
+//                } catch (SQLException throwables) {
+//                    throwables.printStackTrace();
+//                }
+//            }
+//        }
 
     }
-
-
 }
